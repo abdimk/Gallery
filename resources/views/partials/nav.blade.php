@@ -1,5 +1,5 @@
 <!-- header -->
-<header class="header">
+<header>
     <nav class = "navbar">
       <div class = "container">
         <a href = "/" class = "navbar-brand">ArtGallery</a>
@@ -10,7 +10,6 @@
         </div>
       </div>
     </nav>
-    {{$slot}}
     {{-- Place for the banner --}}
   </header>
   <!-- end of header -->

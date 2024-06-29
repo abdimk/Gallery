@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ListingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +15,13 @@ use App\Http\Controllers\GalleryController;
 
 
 //All Listings for the Gallery
-// Route::get('/',[GalleryController::class, 'index']);
-Route::get('/', function(){
-    return view("index");
-});
+Route::get('/',[ListingController::class, 'index']);
+
+// Show the create form 
+Route::get('/create',[ListingController::class, 'create']);
+
+//Store the gallery from
+Route::post('/gallery', [ListingController::class, 'store']);
+
+//Show individual listing
+Route::get('/gallery/{listing}',[ListingController::class, 'show']);

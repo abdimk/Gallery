@@ -299,7 +299,7 @@ main {
     display: block;
     margin-bottom: 0.5rem;
     color: #555555;
-    font-size: 0.9rem;
+    font-size: 19px;
 }
 
 .input-group input {
@@ -338,6 +338,40 @@ button:active {
     background-color: #262629;
     transform: translateY(0);
 }
+
+/* about */
+.about{
+    padding: 1.5rem 0;
+    min-width: 80%;
+}
+/*
+.about-content img{
+    display: inline-block;
+}
+.container-about{
+    display: inline;
+*/
+
+.about-image img {
+    width: 550px;
+    border: 1px solid black;
+    box-shadow: 10px 15px 0px 0px rgba(0, 0, 0, 1);
+}
+
+
+.about-text{
+    margin-right: 4rem;
+    border: 1px  solid black;
+    
+}
+
+.about-text > p{
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+    
+    opacity: 0.8;
+    text-align: center;
+} 
 
 
 
