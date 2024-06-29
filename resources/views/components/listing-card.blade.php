@@ -3,7 +3,7 @@
 <!-- item -->
 <div class = "design-item">
     <div class = "design-img">
-      <img class="main-image" src = "images/art-design-1.jpg" alt = "">
+      <img class="main-image" src = "{{$list->logo ? asset('storage/'.$list->logo):asset('images/art-design-2.jpg')}}" alt = "">
       @php
           $fulldate = $list->created_at;
           $date = new DateTime($fulldate);

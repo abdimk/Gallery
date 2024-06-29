@@ -7,7 +7,7 @@
         <div class="container container-about">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="{{asset('images/about-bg.jpg')}}" alt="">
+                    <img src="{{asset('storage/'.$listing->logo)}}" alt="">
                 </div>
                 <div class="about-text">
                     <div class="title">
