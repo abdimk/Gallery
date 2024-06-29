@@ -7,7 +7,7 @@
 <p align="center"><em>Art gallery built using laravel and blade </em></p>
 
 <div align="center">
-    <a href="https://laravel.com/"><img src="https://images.app.goo.gl/6GDyvncKoHPXNHJ78" width="150"></a>
+    <a href="https://laravel.com/"><img src="https://setwise-dev.s3.amazonaws.com/optimized/27cd1e1bbc848deed2eff20aa65aa6126dc10434a2324fdf61d36cc2df8a1219" width="150"></a>
 </div>
 
 
