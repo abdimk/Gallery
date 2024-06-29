@@ -20,7 +20,7 @@
 
 
 #### Usage
-The app is underdevlopment
+The app is under devlopment
 
 #### Migrations
 To create all the nessesary tables and columns, run the following
