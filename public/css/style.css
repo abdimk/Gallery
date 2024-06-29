@@ -198,8 +198,14 @@ img{
     text-transform: capitalize;
     font-family: var(--Playfair);
 }
-
-
+.text-preview {
+    width: 300px; /* Adjust the width as needed */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* 
  position: fixed;
@@ -228,6 +234,7 @@ footer{
     left: 0;
     width: 100%;
     opacity: 0.8;
+    font-size: 20px;
 }
 .social-links{
     display: flex;
@@ -258,8 +265,27 @@ footer{
     display: block;
     font-family: var(--Playfair);
     letter-spacing: 2px;
+    font-size: 25px;
 }
 
+.footer-post:link,
+.footer-post:visited{
+    color: white;
+}
+
+
+.footer-post{
+    color: white;
+    text-decoration: none;
+    background: #000000;
+    min-width: 100px;
+    display: inline-block;
+    margin-left: 5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 0 5px;
+    
+}
 
 
 /* login section */
@@ -353,7 +379,7 @@ button:active {
 */
 
 .about-image img {
-    width: 550px;
+    width: 500px;
     border: 1px solid black;
     box-shadow: 10px 15px 0px 0px rgba(0, 0, 0, 1);
 }
@@ -373,6 +399,44 @@ button:active {
     text-align: center;
 } 
 
+
+/* Update and the Delete button */
+.button-container {
+    display: flex;
+    gap: 0.5rem; /* Adjusts space between buttons */
+    font-weight: 600;
+    margin: 4px;
+
+}
+
+.btn-update {
+    background-color: #3c393d; /* Tailwind blue-500 */
+    color: white;
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    font-size: 20px; /* Text-sm */
+    
+    border-radius: 0.25rem; /* Rounded corners */
+    transition: background-color 0.3s;
+    height: 40px;
+
+}
+
+.btn-update:hover {
+    background-color: #515358; /* Tailwind blue-600 */
+}
+
+.btn-delete {
+    background-color: rgb(107, 107, 107); /* Tailwind red-500 */
+    color: white;
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    font-size: 20px; /* Text-sm */
+    border-radius: 0.25rem; /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: rgb(116, 111, 111); /* Tailwind red-600 */
+}
 
 
 /* Media Queries */

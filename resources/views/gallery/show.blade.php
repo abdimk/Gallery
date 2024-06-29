@@ -20,9 +20,20 @@
                     <p>{{$listing->description}}</p>
                     <p></p>
                     <p></p>
+                    
+                    <div class="button-container">
+                        <button onclick="location.href='/gallery/{{$listing->id}}/edit'" class="btn-update">Update</button>
+                        <button onclick="location.href='/'"  class="btn-delete">Delete</button>
+                    </div>
+                    
+                    
                 </div>
+                
             </div>
         </div>
+
+       
+        
     </section>
     <!-- end of about -->
 </x-layout>

@@ -3,7 +3,7 @@
 <!-- item -->
 <div class = "design-item">
     <div class = "design-img">
-      <img class="main-image" src = "{{$list->logo ? asset('storage/'.$list->logo):asset('images/art-design-2.jpg')}}" alt = "">
+      <a href = "/gallery/{{$list->id}}"><img class="main-image" src = "{{$list->logo ? asset('storage/'.$list->logo):asset('images/art-design-2.jpg')}}"  alt = ""></a>
       @php
           $fulldate = $list->created_at;
           $date = new DateTime($fulldate);
@@ -13,8 +13,8 @@
       <span>{{$list->location}}</span>
     </div>
     <div class = "design-title">
-      <a href = "/gallery/{{$list->id}}">{{$list->name}}</a>
-      <p class=".title">{{$list->description}}</p>
+      <a  href = "/gallery/{{$list->id}}">{{$list->name}}</a>
+      <p class="text-preview" class=".title">{{$list->description}}</p>
       <a class="btn" href = "#" >Read More</a>
     </div>
     

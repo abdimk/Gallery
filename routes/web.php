@@ -14,8 +14,12 @@ use App\Http\Controllers\ListingController;
 */
 
 
-//All Listings for the Gallery
+//All Listings for the gallery
 Route::get('/',[ListingController::class, 'index']);
+
+
+//Search for Listings in the gallery
+Route::post('/search', [ListingController::class, 'search']);
 
 // Show the create form 
 Route::get('/create',[ListingController::class, 'create']);
@@ -23,5 +27,10 @@ Route::get('/create',[ListingController::class, 'create']);
 //Store the gallery from
 Route::post('/gallery', [ListingController::class, 'store']);
 
+//Show the edit from
+Route::get('/gallery/{listing}/edit', [ListingController::class, 'edit']);
+
+
 //Show individual listing
 Route::get('/gallery/{listing}',[ListingController::class, 'show']);
+

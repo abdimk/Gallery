@@ -19,6 +19,7 @@
     <!-- footer -->
     <footer>
       <span>2024 All rights reserved</span>
+      <a class="footer-post" href="/create">Create Post</a>
     </footer>
     <!-- end of footer -->
   </body>

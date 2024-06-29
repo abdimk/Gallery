@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Validation\Rule;
 use App\Models\Listing;
 use Illuminate\Http\Request;
-
+use Psy\CodeCleaner\FunctionReturnInWriteContextPass;
 
 class ListingController extends Controller
 {
@@ -46,4 +46,17 @@ class ListingController extends Controller
 
         return redirect('/')->with('message', 'Listing created sucessfully!');
     }
+
+
+    // Update the search from
+    public function edit(Listing $listing){
+        if($listing->exists){
+            return view('gallery.edit');
+        }else
+            abort(404);
+    }
+    //Search for the listings in the gallery
+    // public function search(Request $request){
+    //     dd($request);
+    // }
 }
