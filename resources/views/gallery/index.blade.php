@@ -13,7 +13,7 @@
 @endforeach
 
 @else
-    <h2>No listings found in the gallery<h2>
+    <h1 style="font-size:30px; position:absolute;left:85vh; margin-top:5rem">No listings found in the gallery <h1>
 @endunless
 
 </x-wrapper>

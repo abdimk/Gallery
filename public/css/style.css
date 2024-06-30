@@ -289,7 +289,9 @@ footer{
 
 
 /* login section */
-main {
+
+
+.main,main {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -310,7 +312,17 @@ main {
     text-align: center;
 }
 
-.login-container h2 {
+
+.login-container-v2{
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+}
+.login-container-v2 h2 ,.login-container h2 {
     margin-bottom: 1.5rem;
     color: #333333;
     font-size: 1.5rem;

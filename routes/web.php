@@ -30,6 +30,8 @@ Route::post('/gallery', [ListingController::class, 'store']);
 //Show the edit from
 Route::get('/gallery/{listing}/edit', [ListingController::class, 'edit']);
 
+//Update the edit from
+Route::put('/gallery/{listing}', [ListingController::class, 'update']);
 
 //Show individual listing
 Route::get('/gallery/{listing}',[ListingController::class, 'show']);

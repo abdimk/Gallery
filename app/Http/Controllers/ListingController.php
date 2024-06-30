@@ -39,7 +39,7 @@ class ListingController extends Controller
         ]);
 
         if($request->hasFile('logo')){
-            $formFilds['logo'] = $request->file('logo')->store('pictires', 'public');
+            $formFilds['logo'] = $request->file('logo')->store('pictures', 'public');
         }
 
         Listing::create($formFilds);
@@ -48,13 +48,34 @@ class ListingController extends Controller
     }
 
 
-    // Update the search from
+    // Show the listing from
     public function edit(Listing $listing){
-        if($listing->exists){
-            return view('gallery.edit');
+        if($listing){
+            return view('gallery.edit', ['listing'=>$listing]);
         }else
             abort(404);
     }
+
+    //Update the listing form 
+    public function update(Request $request, Listing $listing){
+        $formFilds = $request->validate([
+            'name'=>'required',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'location' => 'required',
+            'tags' => 'required',
+            'description' => 'required'
+        ]);
+
+        if($request->hasFile('logo')){
+            $formFilds['logo'] = $request->file('logo')->store('pictures', 'public');
+        }
+
+        $listing->update($formFilds);
+
+        return back()->with('message', 'Listing updated sucessfully!');
+
+    }
+    // update the listing form 
     //Search for the listings in the gallery
     // public function search(Request $request){
     //     dd($request);
