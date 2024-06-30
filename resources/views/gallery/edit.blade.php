@@ -15,11 +15,12 @@
                 <div class="login-container-v2" style="margin-left:2rem">
                     <h2>Edit Gallery</h2>
                 
-                    <form action="/" method="POST">
-        
+                    <form action="/gallery/{{$listing->id}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
                         <div class="input-group">
-                            <label for="username">Photo</label>
-                            <input type="file" id="username" name="username" value="{{$listing->logo}}">
+                            <label for="logo">Photo</label>
+                            <input type="file" id="logo" name="logo" value="{{$listing->logo}}">
                         </div>
         
                         <div class="input-group">
