@@ -28,6 +28,14 @@ To create all the nessesary tables and columns, run the following
 php artisan migrate
 ```
 
+
+
+#### For Migration and seed the database 
+To create all the nessesary tables and columns and seed the database at the same time
+```
+php artisan migrate:refresh --seed 
+```
+
 #### File Uploading
 When uploading listing files, they go to "storage/app/public". Create a symlink with the following command to make them publicly accessible.
 ```
