@@ -12,7 +12,8 @@ class ListingController extends Controller
     //To display all the gallery listings
     public function index(){
         return view('gallery.index',
-        ['listings'=>Listing::latest()->filter(request(['tag','search']))->paginate(6)
+        // ['listings'=>Listing::latest()->filter(request(['tag','search']))->paginate(6)
+        ['listings'=>Listing::latest()->paginate(6)
     ]);
     }
 
@@ -74,6 +75,17 @@ class ListingController extends Controller
 
         return back()->with('message', 'Listing updated sucessfully!');
 
+    }
+
+
+    // Delete a gallery listing grom the database 
+    public function destroy(Listing $listing){
+        if($listing){
+            $listing->delete();
+        }else
+            abort(404,'Listing could not be found!');
+
+        return redirect('/')->with('message', 'Gallery has been deleted sucessfully!');
     }
     // update the listing form 
     //Search for the listings in the gallery

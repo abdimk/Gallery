@@ -17,7 +17,6 @@ use App\Http\Controllers\ListingController;
 //All Listings for the gallery
 Route::get('/',[ListingController::class, 'index']);
 
-
 //Search for Listings in the gallery
 Route::post('/search', [ListingController::class, 'search']);
 
@@ -33,6 +32,11 @@ Route::get('/gallery/{listing}/edit', [ListingController::class, 'edit']);
 //Update the edit from
 Route::put('/gallery/{listing}', [ListingController::class, 'update']);
 
+// Delete a gallery listing from the database
+Route::delete('/gallery/{listing}', [ListingController::class, 'destroy']);
+
 //Show individual listing
 Route::get('/gallery/{listing}',[ListingController::class, 'show']);
+
+
 

@@ -22,8 +22,16 @@
                     <p></p>
                     
                     <div class="button-container">
-                        <button onclick="location.href='/gallery/{{$listing->id}}/edit'" class="btn-update">Update</button>
-                        <button onclick="location.href='/'"  class="btn-delete">Delete</button>
+                        <button onclick="location.href='/gallery/{{$listing->id}}/edit'">Update</button>
+                        
+                            <form action="/gallery/{{$listing->id}}" class="delete-form" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
+
+                            {{-- class="btn-delete" --}}
+                        
                     </div>
                     
                     
