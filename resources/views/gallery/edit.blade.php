@@ -61,9 +61,10 @@
         
                         <div class="button-container">
                             <button type="submit" class="btn-update">Update</button>
-                            <button type="button" onclick='location.href="#"'  class="btn-delete">Back</button>
+                            
                         </div>
                     </form>
+                    <button onclick='location.href="/"'  class="btn-delete">Back</button>
                 </div>
             
             

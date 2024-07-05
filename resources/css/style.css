@@ -29,7 +29,7 @@ img{
 /* header */
 .header{
     min-height: 35vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/banner-bg.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/banner-bg.jpg) center/cover no-repeat fixed;
     
     display: flex;
     flex-direction: column;
@@ -104,11 +104,11 @@ img{
 .search-input{
     font-family: var(--Roboto);
     font-size: 1.1rem;
+    /* width: 100%; */
     width: 700px;
     outline: 0;
     padding: 0.6rem 0;
     border: none;
-
 }
 .search-input::placeholder{
     text-transform: capitalize;
@@ -125,11 +125,12 @@ img{
 
 /* design */
 .design{
-    padding: 3rem 0;
+    padding: 2.5rem 0;
 }
 .title{
     text-align: center;
     padding: 1rem 0;
+    /* font-size: 15px; */
 }
 .title h2{
     font-family: var(--Playfair);
@@ -138,13 +139,11 @@ img{
 .title p{
     text-transform: uppercase;
     padding: 0.6rem 0;
+    font-size: 19px;
+    font-weight: bold;
 }
-
-
-
-
 .design-content{
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 .design-item{
     cursor: pointer;
@@ -197,16 +196,19 @@ img{
     margin: 0 auto;
 }
 .design-title a{
-    color: black;
+    color: var(--dark);
     text-decoration: none;
     text-transform: capitalize;
     font-family: var(--Playfair);
 }
-
-.btn{
-    color: #2e2e31 !important;
+.text-preview {
+    width: 300px; /* Adjust the width as needed */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
 
 /* 
  position: fixed;
@@ -235,6 +237,7 @@ footer{
     left: 0;
     width: 100%;
     opacity: 0.8;
+    font-size: 20px;
 }
 .social-links{
     display: flex;
@@ -265,12 +268,33 @@ footer{
     display: block;
     font-family: var(--Playfair);
     letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.footer-post:link,
+.footer-post:visited{
+    color: white;
 }
 
 
+.footer-post{
+    color: white;
+    text-decoration: none;
+    background: #000000;
+    min-width: 100px;
+    display: inline-block;
+    margin-left: 5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 0 5px;
+    
+}
+
 
 /* login section */
-main {
+
+
+.main,main {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -291,7 +315,17 @@ main {
     text-align: center;
 }
 
-.login-container h2 {
+
+.login-container-v2{
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+}
+.login-container-v2 h2 ,.login-container h2 {
     margin-bottom: 1.5rem;
     color: #333333;
     font-size: 1.5rem;
@@ -306,7 +340,7 @@ main {
     display: block;
     margin-bottom: 0.5rem;
     color: #555555;
-    font-size: 0.9rem;
+    font-size: 19px;
 }
 
 .input-group input {
@@ -344,6 +378,84 @@ button:hover {
 button:active {
     background-color: #262629;
     transform: translateY(0);
+}
+
+/* about */
+.about{
+    padding: 1.5rem 0;
+    min-width: 80%;
+}
+/*
+.about-content img{
+    display: inline-block;
+}
+.container-about{
+    display: inline;
+*/
+
+.about-image img {
+    width: 500px;
+    border: 1px solid black;
+    box-shadow: 10px 15px 0px 0px rgba(0, 0, 0, 1);
+}
+
+
+.about-text{
+    margin-right: 4rem;
+    border: 1px  solid black;
+    
+}
+
+.about-text > p{
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+    
+    opacity: 0.8;
+    text-align: center;
+} 
+
+
+/* Update and the Delete button */
+.button-container {
+    display: flex;
+    gap: 0.5rem; /* Adjusts space between buttons */
+    font-weight: 600;
+    margin: 4px;
+
+}
+
+.button-container-show{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-update {
+    background-color: #3c393d; /* Tailwind blue-500 */
+    color: white;
+    padding:0.25rem 0.5rem; /* Smaller padding */
+    font-size: 20px; /* Text-sm */
+    border-radius: 0.25rem; /* Rounded corners */
+    transition: background-color 0.3s;
+    height: 40px;
+    
+    
+
+}
+
+.btn-update:hover {
+    background-color: #515358; /* Tailwind blue-600 */
+}
+
+.btn-delete {
+    background-color: rgb(107, 107, 107); /* Tailwind red-500 */
+    color: white;
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    font-size: 20px; /* Text-sm */
+    border-radius: 0.25rem; /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: rgb(116, 111, 111); /* Tailwind red-600 */
 }
 
 

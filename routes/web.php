@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,4 +40,15 @@ Route::delete('/gallery/{listing}', [ListingController::class, 'destroy']);
 Route::get('/gallery/{listing}',[ListingController::class, 'show']);
 
 
+
+// User Routes 
+
+Route::get('/register',[UserController::class, 'create']);
+
+//put new users
+Route::post('/users', [UserController::class, 'store']);
+
+
+//Show Login form
+Route::get('/login', [UserController::class], 'login');
 

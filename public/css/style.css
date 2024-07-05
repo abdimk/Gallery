@@ -130,6 +130,7 @@ img{
 .title{
     text-align: center;
     padding: 1rem 0;
+    /* font-size: 15px; */
 }
 .title h2{
     font-family: var(--Playfair);
@@ -138,6 +139,8 @@ img{
 .title p{
     text-transform: uppercase;
     padding: 0.6rem 0;
+    font-size: 19px;
+    font-weight: bold;
 }
 .design-content{
     margin: 1rem 0;
@@ -207,6 +210,11 @@ img{
     text-overflow: ellipsis;
 }
 
+.design-title .listing-title{
+   font-size: 19px;
+   font-weight: 600;
+   font-family: Tahoma, Geneva, Verdana, sans-serif; ;
+}
 /* 
  position: fixed;
     bottom: 0;
@@ -421,15 +429,20 @@ button:active {
 
 }
 
+.button-container-show{
+    display: flex;
+    justify-content: space-between;
+}
 .btn-update {
     background-color: #3c393d; /* Tailwind blue-500 */
     color: white;
-    padding: 0.25rem 0.5rem; /* Smaller padding */
+    padding:0.25rem 0.5rem; /* Smaller padding */
     font-size: 20px; /* Text-sm */
-    
     border-radius: 0.25rem; /* Rounded corners */
     transition: background-color 0.3s;
     height: 40px;
+    
+    
 
 }
 

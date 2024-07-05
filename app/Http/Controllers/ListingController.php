@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Validation\Rule;
 use App\Models\Listing;
 use Illuminate\Http\Request;
-use Psy\CodeCleaner\FunctionReturnInWriteContextPass;
 
 class ListingController extends Controller
 {
@@ -87,6 +86,7 @@ class ListingController extends Controller
 
         return redirect('/')->with('message', 'Gallery has been deleted sucessfully!');
     }
+
     // update the listing form 
     //Search for the listings in the gallery
     // public function search(Request $request){

@@ -13,7 +13,7 @@
       <span>{{$list->location}}</span>
     </div>
     <div class = "design-title">
-      <a  href = "/gallery/{{$list->id}}">{{$list->name}}</a>
+      <a class="listing-title" href = "/gallery/{{$list->id}}">{{$list->name}}</a>
       <p class="text-preview" class=".title">{{$list->description}}</p>
       <a class="btn" href = "#" >Read More</a>
     </div>
